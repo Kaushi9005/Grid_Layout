@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
         double UserBMI = calculateBMI(weight,Height);
         String bmistring = Double.toString(UserBMI);
         result.setText(bmistring);
+
+        //Display BMI in toast
+
+        Toast toast = Toast.makeText(this,bmistring,Toast.LENGTH_LONG);
+        toast.show();
 
     }
 
